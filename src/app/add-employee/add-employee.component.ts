@@ -70,10 +70,15 @@ export class AddEmployeeComponent implements OnInit {
     });
  
     const today = new Date();
+    
     const maxDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+
     const minDate = new Date(today.getFullYear() - 60, today.getMonth(), today.getDate());
+
     this.maxDate = maxDate.toISOString().split('T')[0];
+
     this.minDate = minDate.toISOString().split('T')[0];
+
     this.maximumDate = today.toISOString().split('T')[0];
  
 }
@@ -105,7 +110,7 @@ dateValidator(control: any) {
   const formattedDate = date.toISOString().split('T')[0];
   const holidays = this.getHolidaysForYear(year);
  
-  if (day === 6 || day === 0 || holidays.includes(formattedDate) || date > new Date()) {
+  if (day === 6 || day === 0 || holidays.includes(formattedDate)) {
     return { invalidDate: true };
   }
   return null;

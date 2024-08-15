@@ -58,6 +58,7 @@ export class LoginComponent implements OnInit {
       username_or_email: this.loginForm.value['userName'],
       password: this.loginForm.value['password']
     }
+
     this.service.sendLoginDetails(loginData).subscribe((res:any) => {
       this.loading=false;
       // console.log('res: ', res)
@@ -104,6 +105,7 @@ export class LoginComponent implements OnInit {
 
 
 togglePasswordVisibility() {
+  
   const passwordInput = this.document.getElementById('password') as HTMLInputElement;
   if (this.passwordFieldType === 'password') {
     this.passwordFieldType = 'text';

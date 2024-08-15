@@ -58,7 +58,9 @@ import { filter } from 'rxjs/operators';
         // console.log("response",res);
  
         this.notificationsData = res;
-        // console.log("this.notificationsData",this.notificationsData.one_year_confirmation_employees);
+        console.log("res...",res);
+        
+       console.log("this.notificationsData",this.notificationsData.one_year_confirmation_employees);
        
  
         this.newEmpData = res.newEmployees || [];

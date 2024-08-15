@@ -55,9 +55,12 @@ constructor(private router:Router) { }
   if (!expiryTime) {
       return true;
   }
+
   const now = new Date().getTime();
   // console.log("now----expiryTime", now, parseInt(expiryTime, 10));
   return now >= parseInt(expiryTime, 10);
+
+  
 }
 
 
